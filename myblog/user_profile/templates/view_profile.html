@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h2>{{ user.username }}'s Profile</h2>
+    <img src="{{ profile.profile_picture.url }}" alt="Profile Picture">
+    <p>Bio: {{ profile.bio }}</p>
+    <p>Total Likes: {{ total_likes }}</p>
+    <h3>Blogs</h3>
+    <ul>
+        {% for blog in blogs %}
+            <li>{{ blog.title }} - {{ blog.likes.count }} likes</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
